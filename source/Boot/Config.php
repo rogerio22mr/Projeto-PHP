@@ -18,8 +18,10 @@ define("CONF_URL_TEST", "https://www.localhost/fsphpproject");
  */
 define("CONF_SITE_NAME", "CaféControl");
 define("CONF_SITE_TITLE", "Gerencie suas contas com o melhor café");
-define("CONF_SITE_DESC",
-    "O CafeControl é um gerenciador de contas simples, poderoso e gratuito. O prazer de tomar um café e ter o controle total de suas contas.");
+define(
+    "CONF_SITE_DESC",
+    "O CafeControl é um gerenciador de contas simples, poderoso e gratuito. O prazer de tomar um café e ter o controle total de suas contas."
+);
 define("CONF_SITE_LANG", "pt_BR");
 define("CONF_SITE_DOMAIN", "upinside.com.br");
 define("CONF_SITE_ADDR_STREET", "SC 406 - Rod. Drº Antônio Luiz Moura Gonzaga");
@@ -83,12 +85,12 @@ define("CONF_IMAGE_QUALITY", ["jpg" => 75, "png" => 5]);
 /**
  * MAIL
  */
-define("CONF_MAIL_HOST", "smtp.sendgrid.net");
-define("CONF_MAIL_PORT", "******************");
-define("CONF_MAIL_USER", "******************");
-define("CONF_MAIL_PASS", "******************");
-define("CONF_MAIL_SENDER", ["name" => "Rgerio Mateus Ricardo", "address" => "rogerio22mateus@outlook.com"]);
-define("CONF_MAIL_SUPPORT", "rogerio22ricardo@gmail.com");
+define("CONF_MAIL_HOST", "");
+define("CONF_MAIL_PORT", "");
+define("CONF_MAIL_USER", "");
+define("CONF_MAIL_PASS", "");
+define("CONF_MAIL_SENDER", ["name" => "Rgerio Mateus Ricardo", "address" => ""]);
+define("CONF_MAIL_SUPPORT", "");
 define("CONF_MAIL_OPTION_LANG", "br");
 define("CONF_MAIL_OPTION_HTML", true);
 define("CONF_MAIL_OPTION_AUTH", true);
@@ -99,6 +101,6 @@ define("CONF_MAIL_OPTION_CHARSET", "utf-8");
  * PAGAR.ME
  */
 define("CONF_PAGARME_MODE", "test");
-define("CONF_PAGARME_LIVE", "******************");
-define("CONF_PAGARME_TEST", "******************");
+define("CONF_PAGARME_LIVE", "ak_live_kYtc8DkpsrTkUYTbK683XGDzQ4jOfa");
+define("CONF_PAGARME_TEST", "ak_test_kYtc8DkpsrTkUYTbK683XGDzQ4jOfa");
 define("CONF_PAGARME_BACK", CONF_URL_BASE . "/pay/callback");

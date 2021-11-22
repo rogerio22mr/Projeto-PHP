@@ -72,13 +72,12 @@ class Cropper
         $this->imagePath = $imagePath;
         $this->imageMime = mime_content_type($this->imagePath);
         $this->imageInfo = pathinfo($this->imagePath);
-        $this->imageName = hash("crc32", $this->imageInfo['basename']) . date("Ymd") . hash("crc32",
-                "{$width}{$height}") . ($this->imageMime == "image/jpeg" ? ".jpg" : ".png");
 
         if (!in_array($this->imageMime, self::$allowedExt)) {
             return "Not a valid JPG or PNG image";
         }
 
+        $this->imageName = $this->name($this->imagePath, $width, $height);
         if (file_exists("{$this->cachePath}/{$this->imageName}") && is_file("{$this->cachePath}/{$this->imageName}")) {
             return "{$this->cachePath}/{$this->imageName}";
         }
@@ -87,22 +86,48 @@ class Cropper
     }
 
     /**
+     * @param string $name
+     * @return string
+     */
+    protected function name(string $name, int $width = null, int $height = null): string
+    {
+        $filterName = filter_var(mb_strtolower(pathinfo($name)["filename"]), FILTER_SANITIZE_STRIPPED);
+        $formats = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜüÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿRr"!@#$%&*()_-+={[}]/?;:.,\\\'<>°ºª';
+        $replace = 'aaaaaaaceeeeiiiidnoooooouuuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr                                 ';
+        $trimName = trim(strtr(utf8_decode($filterName), utf8_decode($formats), $replace));
+        $name = str_replace(["-----", "----", "---", "--"], "-", str_replace(" ", "-", $trimName));
+
+        $hash = $this->hash($this->imagePath);
+        $ext = ($this->imageMime == "image/jpeg" ? ".jpg" : ".png");
+        $widthName = ($width ? "-{$width}" : "");
+        $heightName = ($height ? "x{$height}" : "");
+
+        return "{$name}{$widthName}{$heightName}-{$hash}{$ext}";
+    }
+
+    /**
+     * @param string $path
+     * @return string
+     */
+    protected function hash(string $path): string
+    {
+        return hash("crc32", $path);
+    }
+
+    /**
      * Clear cache
      *
-     * @param string|null $imageName
+     * @param string|null $imagePath
      * @example $t->flush("images/image.jpg"); clear image name and variations size
      * @example $t->flush(); clear all image cache folder
      */
-    public function flush(string $imageName = null): void
+    public function flush(string $imagePath = null): void
     {
-        $scan = scandir($this->cachePath);
-        $name = ($imageName ? hash("crc32", pathinfo($imageName)['basename']) : null);
-
-        foreach ($scan as $file) {
+        foreach (scandir($this->cachePath) as $file) {
             $file = "{$this->cachePath}/{$file}";
-            if ($imageName && strpos($file, $name)) {
+            if ($imagePath && strpos($file, $this->hash($imagePath))) {
                 $this->imageDestroy($file);
-            } elseif (!$imageName) {
+            } elseif (!$imagePath) {
                 $this->imageDestroy($file);
             }
         }

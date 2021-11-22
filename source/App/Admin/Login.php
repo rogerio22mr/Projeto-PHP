@@ -45,11 +45,11 @@ class Login extends Controller
         }
 
         if (!empty($data["email"]) && !empty($data["password"])) {
-            if (request_limit("loginLogin", 3, 5 * 60)) {
-                $json["message"] = $this->message->error("ACESSO NEGADO: Aguarde por 5 minutos para tentar novamente.")->render();
-                echo json_encode($json);
-                return;
-            }
+            // if (request_limit("loginLogin", 3, 5 * 60)) {
+            //     $json["message"] = $this->message->error("ACESSO NEGADO: Aguarde por 5 minutos para tentar novamente.")->render();
+            //     echo json_encode($json);
+            //     return;
+            // }
 
             $auth = new Auth();
             $login = $auth->login($data["email"], $data["password"], true, 5);

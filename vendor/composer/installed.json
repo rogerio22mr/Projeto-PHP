@@ -1,25 +1,26 @@
 [
     {
         "name": "coffeecode/cropper",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "version": "1.2.2",
+        "version_normalized": "1.2.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/robsonvleite/cropper.git",
-            "reference": "b18bc379dde6523da12a4539aac2dc65ea56b9e7"
+            "reference": "91c56ebaf9238547f7de3ab681e66ff427087a04"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/robsonvleite/cropper/zipball/b18bc379dde6523da12a4539aac2dc65ea56b9e7",
-            "reference": "b18bc379dde6523da12a4539aac2dc65ea56b9e7",
+            "url": "https://api.github.com/repos/robsonvleite/cropper/zipball/91c56ebaf9238547f7de3ab681e66ff427087a04",
+            "reference": "91c56ebaf9238547f7de3ab681e66ff427087a04",
             "shasum": ""
         },
         "require": {
             "ext-fileinfo": "*",
             "ext-gd": "*",
+            "ext-mbstring": "*",
             "php": "^7.2"
         },
-        "time": "2019-07-05T22:01:25+00:00",
+        "time": "2019-10-29T15:57:12+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -194,17 +195,17 @@
     },
     {
         "name": "coffeecode/uploader",
-        "version": "1.0.7",
-        "version_normalized": "1.0.7.0",
+        "version": "1.0.8",
+        "version_normalized": "1.0.8.0",
         "source": {
             "type": "git",
             "url": "https://github.com/robsonvleite/uploader.git",
-            "reference": "3117d7e8a77f97a2a20b5aa1f11f6a625d23b14c"
+            "reference": "0a85f2d44115741e5e978c2430d8d9997fd44be7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/robsonvleite/uploader/zipball/3117d7e8a77f97a2a20b5aa1f11f6a625d23b14c",
-            "reference": "3117d7e8a77f97a2a20b5aa1f11f6a625d23b14c",
+            "url": "https://api.github.com/repos/robsonvleite/uploader/zipball/0a85f2d44115741e5e978c2430d8d9997fd44be7",
+            "reference": "0a85f2d44115741e5e978c2430d8d9997fd44be7",
             "shasum": ""
         },
         "require": {
@@ -213,7 +214,7 @@
             "ext-mbstring": "*",
             "php": "^7.2"
         },
-        "time": "2019-07-08T23:06:18+00:00",
+        "time": "2019-10-29T13:47:46+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -324,17 +325,17 @@
     },
     {
         "name": "matthiasmullie/minify",
-        "version": "1.3.61",
-        "version_normalized": "1.3.61.0",
+        "version": "1.3.63",
+        "version_normalized": "1.3.63.0",
         "source": {
             "type": "git",
             "url": "https://github.com/matthiasmullie/minify.git",
-            "reference": "d5acb8ce5b6acb7d11bafe97cecc533f6e4fd751"
+            "reference": "9ba1b459828adc13430f4dd6c49dae4950dc4117"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/d5acb8ce5b6acb7d11bafe97cecc533f6e4fd751",
-            "reference": "d5acb8ce5b6acb7d11bafe97cecc533f6e4fd751",
+            "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/9ba1b459828adc13430f4dd6c49dae4950dc4117",
+            "reference": "9ba1b459828adc13430f4dd6c49dae4950dc4117",
             "shasum": ""
         },
         "require": {
@@ -350,7 +351,7 @@
         "suggest": {
             "psr/cache-implementation": "Cache implementation to use with Minify::cache"
         },
-        "time": "2018-11-26T23:10:39+00:00",
+        "time": "2020-01-21T20:21:08+00:00",
         "bin": [
             "bin/minifycss",
             "bin/minifyjs"
@@ -386,17 +387,17 @@
     },
     {
         "name": "matthiasmullie/path-converter",
-        "version": "1.1.2",
-        "version_normalized": "1.1.2.0",
+        "version": "1.1.3",
+        "version_normalized": "1.1.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/matthiasmullie/path-converter.git",
-            "reference": "5e4b121c8b9f97c80835c1d878b0812ba1d607c9"
+            "reference": "e7d13b2c7e2f2268e1424aaed02085518afa02d9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/matthiasmullie/path-converter/zipball/5e4b121c8b9f97c80835c1d878b0812ba1d607c9",
-            "reference": "5e4b121c8b9f97c80835c1d878b0812ba1d607c9",
+            "url": "https://api.github.com/repos/matthiasmullie/path-converter/zipball/e7d13b2c7e2f2268e1424aaed02085518afa02d9",
+            "reference": "e7d13b2c7e2f2268e1424aaed02085518afa02d9",
             "shasum": ""
         },
         "require": {
@@ -406,7 +407,7 @@
         "require-dev": {
             "phpunit/phpunit": "~4.8"
         },
-        "time": "2018-10-25T15:19:41+00:00",
+        "time": "2019-02-05T23:41:09+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -437,17 +438,17 @@
     },
     {
         "name": "phpmailer/phpmailer",
-        "version": "v6.1.1",
-        "version_normalized": "6.1.1.0",
+        "version": "v6.1.5",
+        "version_normalized": "6.1.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/PHPMailer/PHPMailer.git",
-            "reference": "26bd96350b0b2fcbf0ef4e6f0f9cf3528302a9d8"
+            "reference": "a8bf068f64a580302026e484ee29511f661b2ad3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/26bd96350b0b2fcbf0ef4e6f0f9cf3528302a9d8",
-            "reference": "26bd96350b0b2fcbf0ef4e6f0f9cf3528302a9d8",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a8bf068f64a580302026e484ee29511f661b2ad3",
+            "reference": "a8bf068f64a580302026e484ee29511f661b2ad3",
             "shasum": ""
         },
         "require": {
@@ -456,13 +457,9 @@
             "php": ">=5.5.0"
         },
         "require-dev": {
-            "doctrine/annotations": "1.2.*",
+            "doctrine/annotations": "^1.2",
             "friendsofphp/php-cs-fixer": "^2.2",
-            "phpdocumentor/phpdocumentor": "2.*",
-            "phpunit/phpunit": "^4.8 || ^5.7",
-            "zendframework/zend-eventmanager": "3.0.*",
-            "zendframework/zend-i18n": "2.7.3",
-            "zendframework/zend-serializer": "2.7.*"
+            "phpunit/phpunit": "^4.8 || ^5.7"
         },
         "suggest": {
             "ext-mbstring": "Needed to send email in multibyte encoding charset",
@@ -472,7 +469,7 @@
             "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
             "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
         },
-        "time": "2019-09-27T21:33:43+00:00",
+        "time": "2020-03-14T14:23:48+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
